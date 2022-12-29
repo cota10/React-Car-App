@@ -40,7 +40,6 @@ export const DataTable = () => {
 
     let deleteData = () => {
         server_calls.delete(selectionModel);
-        // console.log(gridData.data.id);
         getData();
         setTimeout( () => { window.location.reload(); }, 1000)
     }
@@ -52,7 +51,6 @@ export const DataTable = () => {
         <DataGrid rows={ carData } columns={ columns } pageSize={ 5 } checkboxSelection={true} 
         onSelectionModelChange={ (item) => {
             setSelectionModel(item)
-						// console.log(item)
           }}
         />
 

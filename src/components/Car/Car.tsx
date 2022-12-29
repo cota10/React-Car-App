@@ -126,7 +126,6 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         display: 'flex',
         alignItems: 'center',
         padding: theme.spacing(0, 1),
-        // necessary for content to be below app bar
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
     },
@@ -220,8 +219,6 @@ export const Car = withRouter(( props:carProps ) => {
                         Car Inventory
                     </Typography>
                     <Button className={classes.toolbar_button} onClick={handleDialogClickOpen}>Create New Car</Button>
-
-                    {/* Dialog Pop Up */}
                     <Dialog open={dialogOpen} onClose={handleDialogClickClose} aria-labelledby="form-dialog-title">
                         <DialogTitle id="form-dialog-title">Add New Car</DialogTitle>
                         <DialogContent>
@@ -233,7 +230,6 @@ export const Car = withRouter(( props:carProps ) => {
                             <Button onClick={handleDialogClickOpen} color="primary">Done</Button>
                         </DialogActions>
                     </Dialog>
-                    {/* End dialog pop-up */}
                 </Toolbar>
             </AppBar>
             <MUIDrawer className={classes.drawer} variant="persistent" anchor="left" open={open} classes={{paper: classes.drawerPaper,}}>
